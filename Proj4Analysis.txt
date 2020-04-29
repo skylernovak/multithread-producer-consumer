@@ -1,0 +1,15 @@
+Case 1
+Producers: 1
+Consumers: 1
+Items Produced: 12
+Items Consumer: 10
+Throughput: 10
+
+Case 2
+Producers: 3
+Consumers: 2
+Items Produced: 26
+Items Consumer: 21
+Throughput: 21
+
+The throughput was not three times as high in the second case as compared to the first case, even though it has three times as many producers. This is because there is a total of 5 threads, instead of just two, and they are all competing for the semaphore locks, impeding the producers from just producing freely. 
